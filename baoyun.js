@@ -56,5 +56,13 @@ var baoyuntime = function() {
 
 // 程序入口
 baoyuntime();                 // 首次处理
-setInterval(baoyuntime,100);  // 后续更新
+setInterval(baoyuntime, 100);  // 后续更新
 
+// 客户端时间
+var userNowTime = function() {
+    document.getElementById('usernowtime').innerHTML = new Date();
+}
+setInterval(userNowTime, 1000)
+
+// 客户端 IP
+// API: https://api.ip.sb/ip
