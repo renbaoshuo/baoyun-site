@@ -66,7 +66,7 @@ setInterval(userNowTime, 1000)
 
 // 客户端 IP
 // API: https://api.ip.sb/ip
-$.getJSON("http://pubstatic.b0.upaiyun.com/?_upnode&t=" + (+new Date()), function (json) {
+$.getJSON("https://pubstatic.b0.upaiyun.com/?_upnode&t=" + (+new Date()), function (json) {
     $('#userip').css("cssText", 'display:inline-block');
     $('#userip').html('<code style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;">' + json.remote_addr + '</code> [' + json.remote_addr_location.province + ' ' + json.remote_addr_location.city + ' ' + json.remote_addr_location.isp + ']');
 });
