@@ -39,9 +39,9 @@ var baoyuntime = function() {
         }
         // 计算月份
         if(ndate <= 25) {
-            bmonth = nmonth - 1;
+            bmonth = nmonth - 2;
         } else {
-            bmonth = nmonth;
+            bmonth = nmonth - 1;
         }
         // 判断输出
         if(bmonth != 0) {
