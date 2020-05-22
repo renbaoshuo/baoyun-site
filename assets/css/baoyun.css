@@ -173,3 +173,13 @@ ul {
     }
 
   
+.info {
+    background: #FFFBCC;
+    border: 1px solid #FFEC19;
+    color: #666;
+    line-height: 2;
+    margin-top: 12px;
+    text-indent: 6px;
+    font-size: 13px;
+}
+

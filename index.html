@@ -8,10 +8,20 @@
         <meta name="description" content="嘿，这里是任宝云的个人网站，欢迎光临！">
         <meta name="keywords" content="任宝云,宝云">
         <meta name="author" content="renbaoshuo">
-        <!-- 引用 CSS 文件 -->
+        <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="assets/css/baoyun.css">
         <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css">
-        <!-- 引用 JavaScript 文件 -->
+        <!-- JavaScript -->
+        <script type="text/javascript">  var JS_VERSION = 1.0;</script>
+        <script language="Javascript1.1">var JS_VERSION = 1.1;</script>
+        <script language="Javascript1.2">var JS_VERSION = 1.2;</script>
+        <script language="Javascript1.3">var JS_VERSION = 1.3;</script>
+        <script language="Javascript1.4">var JS_VERSION = 1.4;</script>
+        <script language="Javascript1.5">var JS_VERSION = 1.5;</script>
+        <script language="Javascript1.6">var JS_VERSION = 1.6;</script>
+        <script language="Javascript1.7">var JS_VERSION = 1.7;</script>
+        <script language="Javascript1.8">var JS_VERSION = 1.8;</script>
+        <script language="Javascript1.9">var JS_VERSION = 1.9;</script>
     </head>
     <body>
         <script src="assets/lib/jQuery/jquery.min.js"></script>
@@ -49,17 +59,27 @@
                     </div>
                 </div>
                 <div class="tab-2">
-                  <label for="tab2-2">客户端信息</label>
-                  <input id="tab2-2" name="tabs-two" type="radio">
-                  <div style="text-align: left;">
-                    <div style="font-size: 85%; line-height: 140%;">
-                        <span>客户端 IP: <code id="userip" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
-                        <br>
-                        <span>客户端当前时间: <code id="usernowtime" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
+                    <label for="tab2-2">客户端信息</label>
+                    <input id="tab2-2" name="tabs-two" type="radio">
+                    <div style="text-align: left;">
+                        <p class="info">
+                            此页面仅用于定位您的浏览器和网络信息，不涉及您的隐私信息，请放心使用。
+                        </p>
+                        <div style="font-size: 85%; line-height: 140%;">
+                            <span>您的 IP 地址: <code id="userip" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
+                            <br>
+                            <span>您的地理位置: <code id="userplace" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
+                            <br>
+                            <span>您的 ISP: <code id="userisp" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
+                            <br>
+                            <span>客户端当前时间: <code id="usernowtime" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
+                            <br>
+                            <span>客户端操作系统: <code id="usersystem" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
+                        </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
+            <span style="text-align: center; font-size: 70%;">当前 CDN 节点: <code id="cdn" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
             <footer id="footer" style="padding-top:10px; font-size: 12px;"><small>&copy;&nbsp;<span id="nowyear">2020</span>&nbsp;<a style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;" href="https://www.baoshuo.ren/">宝硕小站</a>&nbsp;版权所有.</small></footer>
         </div>
         <script src="assets/js/ie.js"></script>
