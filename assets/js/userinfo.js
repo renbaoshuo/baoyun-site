@@ -15,7 +15,7 @@ setInterval(userNowTime, 1000);
 
 
 // 客户端 IP
-$.getJSON("http://ip-api.com/json/?lang=zh-CN", function(json) {
+$.getJSON("https://ip-api.com/json/?lang=zh-CN", function(json) {
     $('#userip').html(json.query);
 });
 
