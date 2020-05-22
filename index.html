@@ -8,8 +8,14 @@
         <meta name="description" content="嘿，这里是任宝云的个人网站，欢迎光临！">
         <meta name="keywords" content="任宝云,宝云">
         <meta name="author" content="renbaoshuo">
-        <link rel="stylesheet" type="text/css" href="baoyun.css">
-        <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- 引用 CSS 文件 -->
+        <link rel="stylesheet" type="text/css" href="assets/css/baoyun.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css">
+        <!-- 引用 JavaScript 文件 -->
+        <script src="assets/js/ie.js"></script>
+        <script src="assets/lib/jQuery/jquery.min.js"></script>
+        <script src="assets/js/baoyun.js"></script>
+        <script src="assets/js/userinfo.js"></script>
     </head>
     <body>
         <div id="main" class="main card">
@@ -24,12 +30,14 @@
                             <p>嘿，这里是任宝云的个人网站，欢迎光临！</p>
                             <br>
                             <div id="baoyun-time" style="display: inherit; font-size: 15px;">
-                                我现在<span id="baoyun-year-pre" style="display: none;">&nbsp;</span><b><span id="baoyun-year" style="display: none;"></span></b><span id="baoyun-year-des" style="display: none;">&nbsp;岁</span><span id="baoyun-month-pre">&nbsp;</span><b><span id="baoyun-month">4</span></b><span id="baoyun-month-des">&nbsp;个月</span>大了哦~&nbsp;
+                                我现在<span id="baoyun-year-pre">&nbsp;</span><b><span id="baoyun-year"></span></b><span id="baoyun-year-des">&nbsp;岁</span><span id="baoyun-month-pre">&nbsp;</span><b><span id="baoyun-month"></span></b><span id="baoyun-month-des">&nbsp;个月</span>大了哦~&nbsp;
                             </div>
+                            <!-- 检测 JavaScript 是否启用 -->
                             <noscript>
                                 <div style="padding: 10px 40px 10px 40px; position: relative; text-align: center; background: rgba(177,177,177,.3)!important;">浏览器未开启 JavaScript 功能! </div>
                             </noscript>
-                            <script>document.getElementById('baoyun-time').style.display = 'inherit';</script>
+                            <script>$('#baoyun-time').show();</script>
+                            <!-- 联系我 -->
                             <br>
                             <h3 style="padding-left: 5px;">联系我</h3>
                             <div class="contact">
@@ -46,19 +54,16 @@
                 <div class="tab-2">
                   <label for="tab2-2">客户端信息</label>
                   <input id="tab2-2" name="tabs-two" type="radio">
-                  <div>
-                    <div style="font-size: 80%; line-height: 140%;">
-                        客户端 IP: <span id="userip"></span>
+                  <div style="text-align: left;">
+                    <div style="font-size: 85%; line-height: 140%;">
+                        <span>客户端 IP: <code id="userip" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
                         <br>
-                        客户端当前时间: <code id="usernowtime" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code>
+                        <span>客户端当前时间: <code id="usernowtime" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;"></code></span>
                     </div>
                   </div>
                 </div>
               </div>
             <footer id="footer" style="padding-top:10px; font-size: 12px;"><small>&copy;&nbsp;<span id="nowyear">2020</span>&nbsp;<a style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;" href="https://www.baoshuo.ren/">宝硕小站</a>&nbsp;版权所有.</small></footer>
-        </div>
-        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="baoyun.js"></script>
-        
+        </div>       
     </body>
 </html>

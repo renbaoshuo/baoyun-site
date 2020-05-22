@@ -47,16 +47,27 @@ body {
     text-align: left;
 }
 
-.card {
-    border: none;
-    padding: 20px 80px 20px;
-    border-radius: 10px;
-    max-width: 525px;
+
+@media(min-width: 550px) {
+    .card {
+        border: none;
+        padding: 20px 80px 20px;
+        border-radius: 10px;
+        max-width: 550px;
+    }
+}
+@media(max-width: 549px) {
+    .card {
+        border: none;
+        padding: 20px 40px 20px;
+        border-radius: 10px;
+        max-width: 550px;
+    }
 }
 
 .main {
     position: relative;
-    top: 10%;
+    top: 15%;
     transform: translateY(-50%);
     left: 50%;
     transform: translateX(-50%);
