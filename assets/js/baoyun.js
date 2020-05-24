@@ -9,6 +9,7 @@
  */
 
 // 变量定义 Define variable
+/** NOTICE: `birthYear`, `birthMonth` and `birthDay` must use Beijing Time (UTC+8). */
 var birthYear  = 2020;  /** 出生年份 Birth Year  */
 var birthMonth = 1;     /** 出生月份 Birth Month */
 var birthDay   = 25;    /** 出生日期 Birth Day   */
@@ -19,8 +20,8 @@ var baoyuntime = function() {
     // 变量定义 Define variable
     var ndate  = new Date();
     var nyear  = ndate.getUTCFullYear();
-    var nmonth = ndate.getUTCMonth();
-    var nday   = ndate.getUTCDay();
+    var nmonth = ndate.getUTCMonth()+1;
+    var nday   = ndate.getUTCDate();
     var nhour  = ndate.getUTCHours();
     var byear  = 0;
     var bmonth = 0;
@@ -43,7 +44,7 @@ var baoyuntime = function() {
 
     // 计算岁 Calculation display year
     if((nyear > birthYear) && (nmonth == birthMonth)) {
-        byear = nday > 25 ? nyear - birthYear : nyear - birthYear - 1;
+        byear = nday >= birthDay ? nyear - birthYear : nyear - birthYear - 1;
     } else {
         byear = nyear - birthYear;
     }
