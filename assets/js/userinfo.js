@@ -57,7 +57,8 @@ getCDNinfo = function() {
 			let area = data.split("colo=")[1].split("\n")[0];
 			for (var i = 0; i < areas.length; i++) {
 				if (areas[i].indexOf(area) != -1) {
-                    return areas[i];
+                    $('#cdn').html(areas[i]);
+                    break;
 				}
 			}
 		}
@@ -65,9 +66,9 @@ getCDNinfo = function() {
 }
 $(document).ready(function() {
     try {
-        $('#cdn').html(getCDNinfo());
+        getCDNinfo()
     } catch {
-        $('#cdn').html("源站");
+        $('#cdn').html("未使用 CDN ！");
     };
 	
 });
