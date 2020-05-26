@@ -1,7 +1,7 @@
 /**
- * Baoyun's Small Site
+ * baoyun's Small Site
  * 
- * Author: RenBaoshuo
+ * Author: RenbaoHuo
  * Date: 2020/05/21
  * Link: https://www.baoshuo.ren/
  * Github: renbaoshuo/baoyun-site
@@ -10,9 +10,9 @@
 
 // 变量定义 Define variable
 /** NOTICE: `birthYear`, `birthMonth` and `birthDay` must use Beijing Time (UTC+8). */
-var birthYear  = 2020;  /** 出生年份 Birth Year  */
-var birthMonth = 1;     /** 出生月份 Birth Month */
-var birthDay   = 25;    /** 出生日期 Birth Day   */
+var birthYear  = 2006;  /** 出生年份 Birth Year  */
+var birthMonth = 6;     /** 出生月份 Birth Month */
+var birthDay   = 4;     /** 出生日期 Birth Day   */
 
 /** 函数定义 Define function */
 var baoyuntime = function() {
@@ -48,6 +48,13 @@ var baoyuntime = function() {
     } else {
         byear = nyear - birthYear;
     }
+    // 计算月份 Calculation display month
+    bmonth = ndate < birthDay ? nmonth - birthMonth - 1 : nmonth - birthMonth;
+    if(bmonth < 0) {
+        bmonth = 12 + bmonth;
+        byear  = byear - 1;
+    }
+
     // 判断输出 determine display
     if(byear > 0) {
         $('#baoyun-year').html(byear);
@@ -56,10 +63,6 @@ var baoyuntime = function() {
         $('#baoyun-year').hide();
         $('#baoyun-year-des').hide();
     }
-    
-    // 计算月份 Calculation display month
-    bmonth = ndate < birthDay ? nmonth - birthMonth - 1 : nmonth - birthMonth;
-    // 判断输出 determine display
     if(bmonth > 0) {
         $('#baoyun-month').html(bmonth);
     } else {
