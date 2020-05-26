@@ -204,3 +204,13 @@ ul {
     font-size: 13px;
 }
 
+code {
+    font-family: Consolas;
+    padding: 2px 4px; 
+    font-size: 80%; 
+    line-height: 125%;
+    color: #c7254e; 
+    background-color: #f9f2f4; 
+    border-radius: 4px;
+}
+
