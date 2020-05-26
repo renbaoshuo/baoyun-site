@@ -11,9 +11,9 @@
 
 // 变量定义 Define variable
 /** NOTICE: `birthYear`, `birthMonth` and `birthDay` must use Beijing Time (UTC+8). */
-var birthYear  = 2006;  /** 出生年份 Birth Year  */
-var birthMonth = 6;     /** 出生月份 Birth Month */
-var birthDay   = 4;     /** 出生日期 Birth Day   */
+var birthYear  = 2020;  /** 出生年份 Birth Year  */
+var birthMonth = 1;     /** 出生月份 Birth Month */
+var birthDay   = 15;     /** 出生日期 Birth Day   */
 
 /** 函数定义 Define function */
 var baoyuntime = function() {
