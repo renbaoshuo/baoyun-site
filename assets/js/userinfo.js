@@ -1,10 +1,12 @@
 /**
  * Baoyun's Small Site
- * 
+ * -------------------------------
  * Author: RenBaoshuo
  * Date: 2020/05/21
  * Link: https://www.baoshuo.ren/
  * Github: renbaoshuo/baoyun-site
+ * -------------------------------
+ * Copyright 2020 RenBaoshuo All Rights Reserved.
  */
 
 // 客户端时间

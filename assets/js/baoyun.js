@@ -1,11 +1,12 @@
 /**
- * baoyun's Small Site
- * 
+ * Baoyun's Small Site
+ * ------------------------------
  * Author: RenbaoHuo
- * Date: 2020/05/21
+ * Date: 2020/05/26
  * Link: https://www.baoshuo.ren/
  * Github: renbaoshuo/baoyun-site
- * 
+ * ------------------------------
+ * Copyright 2020 RenBaoshuo All Rights Reserved.
  */
 
 // 变量定义 Define variable
