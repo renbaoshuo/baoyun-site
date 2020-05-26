@@ -28,7 +28,7 @@ body {
     z-index: -1;
     background-size: cover;
     /* background-image: url(assets/img/background.jpg); */
-    background-image: url(https://cdn.jsdelivr.net/gh/renbaoshuo/baoshuo-site@master/assets/img/background.jpg);
+    background-image: url(https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/img/background.jpg);
 }
 
 /* 定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸 */
