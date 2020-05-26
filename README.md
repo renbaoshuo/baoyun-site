@@ -1,6 +1,11 @@
 # 宝云小站
 
-> 任宝硕的弟弟叫任宝云，于是小宝云的哥哥便花重金买下了 `baoyun.ren` 这个域名，也准备好了这一切...
+> [宝云小站](https://baoyun.ren)
 
-站点地址: <https://baoyun.ren>
+## 关于
 
+由 [任宝硕](https://baoshuo.ren) 编写。
+
+本项目使用了 [jQuery](https://jquery.com/) 和 [font-awesome](http://fontawesome.io/)
+
+CDN 加速服务由 [CloudFlare](https://www.cloudflare.com/) 提供。
