@@ -66,7 +66,7 @@ getCDNinfo = function() {
 $(document).ready(function() {
     try {
         $('#cdn').html(getCDNinfo());
-    } finally {
+    } catch {
         $('#cdn').html("源站");
     };
 	
