@@ -25,7 +25,6 @@ body {
     top:0;
     left:0;
     width: 100%;
-    height: 100%;
     filter: blur(0px);
     z-index: -1;
     background-size: cover;
@@ -65,7 +64,7 @@ body {
     text-align: left;
 }
 
-@media(min-width: 550px) {
+@media(min-width: 400px) {
     .card {
         border: none;
         padding: 20px 80px 20px;
@@ -81,8 +80,24 @@ body {
     .contact td {
         min-width: 250px;
     }
+    .contact td b {
+        color: #333;
+        font-size: 17px;
+    }
 }
-@media(max-width: 549px) {
+@media(max-width: 399px) {
+    body {
+        font-size: 10px!important;
+    }
+    #main {
+        top: 0%!important;
+    }
+    .main .i {
+        font-size: 13px;
+    }
+    .time {
+        font-size: 12px;
+    }
     .card {
         border: none;
         padding: 20px 40px 20px;
@@ -93,7 +108,18 @@ body {
         line-height: 175%;
     }
     .contact td {
-        min-width: 140px;
+        min-width: 120px;
+        font-size: 12px !important;
+    }
+    .contact td b, .contact td b a {
+        color: #333;
+        font-size: 12px;
+    }
+    .tabs [class^="tab"] label,
+    .tabs [class*=" tab"] label {
+        font-size: 1.5em !important;
+        padding: 0.75rem 0 !important;
+        text-align: center; 
     }
 }
 
@@ -105,33 +131,35 @@ body {
     transform: translateX(-50%);
 }
 
+/* 标题 */
 h2 {
     color: #444;
     font-size: 27px;
     margin-top: 15px;
     margin-bottom: 20px;
 }
-
 h3 {
     font-size: 17px;
     margin-top: 1em;
 }
 
+/* 联系方式 */
 .contact {
     padding-left: -5px;
 }
-
 .contact a {
     text-decoration: none; 
     font-size: 17px; 
     color: #333;
 }
 
+/* 无序列表 */
 ul {
     list-style-type: none;
     padding-inline-start: 10px !important;
 }
 
+/* Tab */
 .tabs {
     display: block;
     display: -webkit-flex;
@@ -233,3 +261,7 @@ code {
     border-radius: 4px;
 }
 
+.time {
+    display: inherit; 
+    font-size: 15px;
+}

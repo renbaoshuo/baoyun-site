@@ -77,3 +77,5 @@ var baoyuntime = function() {
 baoyuntime();                  // 首次处理
 setInterval(baoyuntime, 100);  // 后续更新
 
+// 样式修改
+$('#bg').height($(document).height());
