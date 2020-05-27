@@ -9,3 +9,5 @@
 本项目使用了 [jQuery](https://jquery.com/) 和 [font-awesome](http://fontawesome.io/)
 
 CDN 加速服务由 [CloudFlare](https://www.cloudflare.com/) 提供。
+
+由于速度问题，国内节点访问已经导向至香港服务器。
