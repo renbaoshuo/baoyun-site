@@ -1,123 +1,30 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>宝云小站</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="嘿，这里是任宝云的个人网站，欢迎光临！">
-        <meta name="keywords" content="任宝云,宝云">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
         <meta name="author" content="renbaoshuo">
+        <meta name="github" content="https://github.com/renbaoshuo/baoyun-site/">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/css/baoyun.css">
-        <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@v1.2/assets/css/baoyun.min.css"> -->
-        <!-- <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css"> -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/tab.css">
+        <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css">
+        <!-- JavaScript -->
+        <script src="assets/lib/jQuery/jquery.min.js"></script>
     </head>
-    <body>
-        <!-- JavaScript -->
-        <!-- <script src="assets/lib/jQuery/jquery.min.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-        <!-- Background -->
-        <div id="bg"></div>
-        <!-- Main Card -->
-        <div id="main" class="main card">
-            <!-- Title -->
-            <h2 style="text-align: center;">宝云小站</h2>
-            <!-- Tabs -->
-            <div class="tabs">
-                <!-- Tab 1 -->
-                <div class="tab-2">
-                    <label for="tab2-1">主页</label>
-                    <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
-                    <div>
-                        <!-- 首页 -->
-                        <div class="i">
-                            <p>嘿，这里是任宝云的个人网站，欢迎光临！</p>
-                            <br>
-                            <div id="baoyun-time" style="display: inherit; font-size: 15px;">
-                                我现在<span id="baoyun-year-pre">&nbsp;</span><b><span id="baoyun-year"></span></b><span id="baoyun-year-des">&nbsp;岁</span><span id="baoyun-month-pre">&nbsp;</span><b><span id="baoyun-month"></span></b><span id="baoyun-month-des">&nbsp;个月</span>大了哦~&nbsp;
-                            </div>
-                            <!-- 检测 JavaScript 是否启用 -->
-                            <noscript>
-                                <div style="padding: 10px 40px 10px 40px; position: relative; text-align: center; background: rgba(177,177,177,.3)!important;">浏览器未开启 JavaScript 功能! </div>
-                            </noscript>
-                            <script>$('#baoyun-time').show();</script>
-                            <!-- 联系我 -->
-                            <br>
-                            <h3 style="padding-left: 5px;">联系我</h3>
-                            <div class="contact">
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <i class="fa fa-qq" style="color:#1188ee;"></i>
-                                                <b style="color: #333; font-size: 17px;">&nbsp;2069818063</b>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tab 2 -->
-                <div class="tab-2">
-                    <label for="tab2-2">客户端信息</label>
-                    <input id="tab2-2" name="tabs-two" type="radio">
-                    <div style="text-align: left;">
-                        <div class="info">
-                            <table style="padding: 10px 5px 10px 2px;">
-                                <tr>
-                                    <td><i class="fa fa-info-circle"></i></td>
-                                    <td style="padding-left: 10px; text-align: left; text-indent: 0%; line-height: 16px;">
-                                        此页面仅用于定位您的浏览器和网络信息，不涉及您的隐私信息，更不会将数据上传至服务器，请放心使用。
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <br>
-                        <div style="font-size: 85%; line-height: 165%;">
-                            <span>您的 IP 地址： <code id="userip">获取中</code></span>
-                            <br>
-                            <span>您的地理位置： <code id="usercon">获取中</code>&nbsp;<code id="userplace">获取中</code>&nbsp;&nbsp;<code id="userisp">获取中</code></span>
-                            <br>
-                            <span>客户端当前时间： <code id="usernowtime">获取中</code></span>
-                            <br>
-                            <span>客户端操作系统： <code id="usersystem">获取中</code></span>
-                        </div>
-                    </div>
-                </div>
+    <body class="body" id="body">
+        <div id="app">加载中...</div>
+        <noscript>
+            <div style="padding: 10px 40px 10px 40px; position: relative; text-align: center; background: rgba(177,177,177,.3)!important;">
+                浏览器未开启 JavaScript 功能! 
             </div>
-            <!-- CDN Info -->
-            <span style="text-align: center; font-size: 70%;" id="cdntext">当前 CDN 节点: <code id="cdn" style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;">获取中</code></span>
-            <!-- Footer -->
-            <footer id="footer" style="padding-top:10px; font-size: 10px;">
-                <!-- Copyright -->
-                <span>&copy;&nbsp;<span id="nowyear">2020</span>&nbsp;<a style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;" href="https://www.baoshuo.ren/">宝硕小站</a>&nbsp;版权所有</span>
-                | <a href="https://github.com/renbaoshuo/baoyun-site" style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;">GitHub</a>
-                <br>
-                <!-- Friend Links -->
-                <span>亲情链接: <a href="https://baoshuo.ren/" style="text-decoration: none; line-height: 200%; color: #6c767d;">宝硕小站</a></span>
-            </footer>
-        </div>
+        </noscript>
         <!-- JavaScript -->
-        <script src="assets/js/ie.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/assets/js/ie.min.js"></script> -->
-        <script src="assets/js/baoyun.js"></script>
-        <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@v1.2/assets/js/baoyun.min.js"></script> -->
-        <script src="assets/js/userinfo.js"></script> 
-        <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@v1.2/assets/js/userinfo.min.js"></script> -->
+        <script src="assets/js/init.js"></script>
+        <!-- <script src="assets/js/main.js"></script> -->
+        <script src="assets/js/style.js"></script> 
     </body>
 </html>
-
-<!----------------------------------------------------->
-<!--             Baoyun's small site                 -->
-<!-- ----------------------------------------------- -->
-<!-- Author:        renbaoshuo                       -->
-<!-- Date:          2020/05/26                       -->
-<!-- Link:          https://www.baoshuo.ren          -->
-<!-- Github:        renbaoshuo/baoyun-site           -->
-<!-- ----------------------------------------------- -->
-<!-- Copyright 2020 RenBaoshuo All Rights Reserved.  -->
-<!----------------------------------------------------->

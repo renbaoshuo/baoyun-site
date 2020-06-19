@@ -1,0 +1,194 @@
+/* CSS 样式表 */
+
+/* 主体 */
+body {
+    font-family: Heiti;
+    font-size: 18px;
+    color: #6c767d;
+    height: 95vh;
+}
+
+/* 背景 */
+#bg {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    filter: blur(0px);      /* 毛玻璃效果 (0px为关闭) */
+    z-index: -1;
+    background-size: cover;
+    /* background-image: url(../img/background.jpg); */
+    /* background-image: url(https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/assets/img/background.jpg); */
+}
+
+/* 定义滚动条高宽及背景 (高宽分别对应横竖滚动条的尺寸) */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #F5F5F5;
+}
+
+/* 定义滚动条轨道 (内阴影,圆角) */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(200, 200, 200, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+/* 定义滑块 (内阴影,圆角) */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(200, 200, 200, .3);
+    background-color: #555;
+}
+
+/* 核心区 */
+.main {
+    background-color: rgba(255, 255, 255,.85);
+    text-align: center;
+    filter: none !important;
+}
+.main .i {
+    color: #000;
+    font-size: 17px;
+    text-align: left;
+}
+
+/* 手机配置 */
+@media(min-width: 769px) {
+    /* 核心区 */
+    .card {
+        border: none;
+        padding: 20px 80px 20px;
+        border-radius: 10px;
+        max-width: 550px;
+    }
+    /* 核心区 tab */
+    .tabs {
+        min-height: 350px;
+    }
+    /* 联系方式 表格 */
+    .contact table {
+        line-height: 175%;
+    }
+    .contact td {
+        min-width: 250px;
+    }
+    .contact td b {
+        color: #333;
+        font-size: 17px;
+    }
+}
+@media(max-width: 768px) {
+    /* 主体 */
+    body {
+        font-size: 10px !important;
+    }
+    /* 核心区 */
+    .main {
+        top: 0% !important;
+    }
+    .main .i {
+        font-size: 13px;
+    }
+    /* 时间 */
+    .time {
+        font-size: 12px;
+    }
+    /* 核心区卡片 */
+    .card {
+        border: none;
+        padding: 20px 40px 20px;
+        border-radius: 10px;
+        max-width: 550px;
+    }
+    /* 联系方式 */
+    .contact table {
+        line-height: 175%;
+    }
+    .contact td {
+        min-width: 120px;
+        font-size: 12px !important;
+    }
+    .contact td b, .contact td b a {
+        color: #333;
+        font-size: 12px;
+    }
+    /* tab */
+    .tabs [class^="tab"] label,
+    .tabs [class*=" tab"] label {
+        font-size: 1.5em !important;
+        padding: 0.75rem 0 !important;
+        text-align: center; 
+    }
+}
+
+/* 核心区卡片 */
+.main {
+    position: relative;
+    top: 15%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 标题 */
+h2 {
+    color: #444;
+    font-size: 27px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 17px;
+    margin-top: 1em;
+}
+
+/* 联系方式 */
+.contact {
+    padding-left: -5px;
+}
+.contact a {
+    text-decoration: none; 
+    font-size: 17px; 
+    color: #333;
+}
+
+/* 无序列表 */
+ul {
+    list-style-type: none;
+    padding-inline-start: 10px !important;
+}
+
+/* 信息 */
+.info {
+    background: #FFFBCC;
+    border: 1px solid #FFEC19;
+    color: #666;
+    line-height: 2;
+    margin-top: 12px;
+    text-indent: 6px;
+    font-size: 13px;
+}
+
+/* 行内代码 */
+code {
+    font-family: Consolas;
+    padding: 2px 4px; 
+    font-size: 80%; 
+    line-height: 125%;
+    color: #c7254e; 
+    background-color: #f9f2f4; 
+    border-radius: 4px;
+}
+
+/* 时间 */
+.time {
+    display: inherit; 
+    font-size: 15px;
+}
+
+footer#footer {
+    display: block;
+}
