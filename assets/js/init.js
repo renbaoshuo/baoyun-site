@@ -40,5 +40,6 @@ if(isUseOldBrowser) {
 } else {
     // 执行核心代码
     $.getScript("assets/js/main.js");
+    $.getScript("assets/js/style.js");
 }
 
