@@ -55,9 +55,12 @@ body {
     text-align: left;
 }
 
-/* 手机配置 */
+
 @media(min-width: 769px) {
     /* 核心区 */
+    .main {
+        margin-top: 50px;
+    }
     .card {
         border: none;
         padding: 20px 80px 20px;
@@ -80,6 +83,7 @@ body {
         font-size: 17px;
     }
 }
+/* 手机配置 */
 @media(max-width: 768px) {
     /* 主体 */
     body {
