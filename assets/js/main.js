@@ -283,6 +283,5 @@ $('#userinfo').append(`<span>客户端操作系统： <code>${userOSInfo}</code>
 $('#footer').prepend(`<span>&copy;&nbsp;<span>${new Date().getFullYear()}</span>&nbsp;<a style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;" href="https://www.baoshuo.ren/">宝硕小站</a>&nbsp;版权所有</span> | <a href="https://github.com/renbaoshuo/baoyun-site" style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;">GitHub</a><br>`);
 $('#footer').append(htmllinks);
 
-
 // 样式处理
 $.getScript("assets/js/style.js");
