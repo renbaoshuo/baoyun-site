@@ -6,41 +6,12 @@
 $.ajaxSetup({async: false});   // 不关有 bug !!! - 2020/6/19
 
 // 引入 JSON 文件
-// var json = (function () {
-//     var json = null;
-//     $.getJSON("./info.json", function(data) {json = data;});
-//     return json;
-// })();
+var json = (function () {
+    var json = null;
+    $.getJSON("./info.json", function(data) {json = data;});
+    return json;
+})();
 
-// [测试用] 引入 JSON 文件
-var info =   
-{
-    "url": "https://baoyun.ren",
-    "title": "宝云小站", 
-    "name": "任宝云", 
-    "birthInfo": {
-        "birthYear": 2020, 
-        "birthMonth": 1, 
-        "birthDate": 25
-    }, 
-    "contact": {
-        "QQ": "2069818063",
-        "Email": "i@baoyun.ren"
-    }, 
-    "friendLinks": {
-        "宝硕小站": "https://www.baoshuo.ren"
-    },
-    "description": "宝云小站",
-    "keywords": [
-        "任宝云",
-        "宝云"
-    ],
-    "styles": {
-        "backgroundImgURL": "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/assets/img/background.jpg"
-    },
-    "displayCloudflareCDNInfo": true 
-}
-;
 
 // 定义函数
 
