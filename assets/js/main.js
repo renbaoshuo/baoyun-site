@@ -6,7 +6,7 @@
 $.ajaxSetup({async: false});   // 不关有 bug !!! - 2020/6/19
 
 // 引入 JSON 文件
-var json = (function () {
+var info = (function () {
     var json = null;
     $.getJSON("./info.json", function(data) {json = data;});
     return json;
