@@ -128,6 +128,7 @@ function getHTMLFriendLinks(links) {
         tmpkwd = "友情链接: ";
         for(var key in links) {
             tmpkwd += `<a href="${links[key]}" style="text-decoration: none; line-height: 200%; color: #6c767d;">${key}</a>`;
+            tmpkwd += "&nbsp;";
         }
     }
     return tmpkwd;
