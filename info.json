@@ -21,7 +21,7 @@
         "宝云"
     ],
     "styles": {
-        "backgroundImgURL": "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/assets/img/background.jpg"
+        "backgroundImgURL": "assets/img/background.jpg"
     },
     "displayCloudflareCDNInfo": true 
 }
