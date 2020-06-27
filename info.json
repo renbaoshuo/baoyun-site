@@ -1,6 +1,7 @@
 {
     "url": "https://baoyun.ren",
-    "title": "宝云小站", 
+    "title": "宝云小站",
+    "HTMLtitle": "<img src=\"assets/img/baoyun.svg\" style=\"height: 40px;\">", 
     "name": "任宝云", 
     "birthInfo": {
         "birthYear": 2020, 

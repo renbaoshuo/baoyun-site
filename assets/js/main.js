@@ -209,7 +209,7 @@ $('#app').append(`<div id="bg" style="background-image: url(${info.styles.backgr
 $('#app').append('<div id="main" class="main card"></div>');                         // 中央卡片
 
 // 核心卡片
-$('#main').append(`<h2 id="title" style="text-align: center;">${info.title}</h2>`);  // 显示标题
+$('#main').append(`<h2 id="title" style="text-align: center;">${info.HTMLtitle}</h2>`);  // 显示标题
 $('#main').append('<div id="tab" class="tabs"></div>');                              // 插入 tab 模块
 if(info.displayCloudflareCDNInfo) {
     $('#main').append(`<span id="ftinfo" style="text-align: center; font-size: 70%;">当前 CDN 节点: <code>${CDNInfo}</code></span>`);
