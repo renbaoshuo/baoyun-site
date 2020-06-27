@@ -212,7 +212,7 @@ $('#app').append('<div id="main" class="main card"></div>');                    
 $('#main').append(`<h2 id="title" style="text-align: center;">${info.title}</h2>`);  // 显示标题
 $('#main').append('<div id="tab" class="tabs"></div>');                              // 插入 tab 模块
 if(info.displayCloudflareCDNInfo) {
-    $('#main').append(`<span style="text-align: center; font-size: 70%;">当前 CDN 节点: <code style="padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px;">${CDNInfo}</code></span>`);
+    $('#main').append(`<span id="ftinfo" style="text-align: center; font-size: 70%;">当前 CDN 节点: <code>${CDNInfo}</code></span>`);
 }
 $('#main').append('<footer id="footer" style="padding-top:10px; font-size: 10px;"></footer>');
 
@@ -251,5 +251,10 @@ $('#userinfo').append(`<span>客户端操作系统： <code>${userOSInfo}</code>
 $('#footer').prepend(`<span>&copy;&nbsp;<span>${new Date().getFullYear()}</span>&nbsp;<a style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;" href="https://www.baoshuo.ren/">宝硕小站</a>&nbsp;版权所有</span> | <a href="https://github.com/renbaoshuo/baoyun-site" style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;">GitHub</a><br>`);
 $('#footer').append(htmllinks);
 
+
 // 样式处理
 $.getScript("assets/js/style.js");
+
+// 渲染时间
+endTime = new Date().getTime();
+$('#ftinfo').append(`&nbsp;&nbsp;|&nbsp;&nbsp;加载耗时： <code>${endTime-startTime}</code>`);
