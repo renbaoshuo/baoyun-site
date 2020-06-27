@@ -40,6 +40,7 @@ if(isUseOldBrowser) {
 
 } else {
     // 执行核心代码
-    $.getScript("assets/js/main.js");
+    // $.getScript("assets/js/main.js");
+    $.getScript("https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/main.min.js");
 }
 

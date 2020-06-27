@@ -253,8 +253,6 @@ $('#footer').append(htmllinks);
 
 
 // 样式处理
-$.getScript("assets/js/style.js");
+// $.getScript("assets/js/style.js");
+$.getScript("https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/style.min.js");
 
-// 渲染时间
-endTime = new Date().getTime();
-$('#ftinfo').append(`&nbsp;&nbsp;|&nbsp;&nbsp;加载耗时：<code>${endTime-startTime}ms</code>`);

@@ -3,27 +3,31 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="author" content="renbaoshuo">
-        <meta name="github" content="https://github.com/renbaoshuo/baoyun-site/">
+        <meta name="keywords"    content="">
+        <meta name="author"      content="renbaoshuo">
+        <meta name="github"      content="https://github.com/renbaoshuo/baoyun-site/">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/tab.css">
-        <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/style.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="assets/css/tab.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/tab.min.css">
+        <!-- <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
         <!-- JavaScript -->
-        <script src="assets/lib/jQuery/jquery.min.js"></script>
+        <!-- <script src="assets/lib/jQuery/jquery.min.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
         <script>
             // 加载耗时
             var startTime, endTime;
             startTime = new Date().getTime();
         </script>
         <!-- Preload -->
-        <link rel="preload" href="assets/lib/font-awesome/fonts/fontawesome-webfont.woff2" as="style">
-        <link rel="preload" href="assets/js/main.js" as="script">
-        <link rel="preload" href="assets/js/style.js" as="script">
-        <link rel="preload" href="assets/img/background.jpg" as="img">
+        <!-- <link rel="preload" href="assets/lib/font-awesome/fonts/fontawesome-webfont.woff2" as="style"> -->
+        <!-- <link rel="preload" href="assets/js/main.js" as="script"> -->
+        <!-- <link rel="preload" href="assets/js/style.js" as="script"> -->
+        <!-- <link rel="preload" href="assets/img/background.jpg" as="img"> -->
     </head>
     <body class="body" id="body">
         <div id="app">加载中...</div>
@@ -33,8 +37,16 @@
             </div>
         </noscript>
         <!-- JavaScript -->
-        <script src="assets/js/init.js"></script>
+        <!-- <script src="assets/js/init.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/init.min.js"></script>
         <!-- <script src="assets/js/main.js"></script> -->
+        <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/main.min.js"></script> -->
         <!-- <script src="assets/js/style.js"></script>  -->
+        <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/style.min.js"></script>  -->
+        <script>
+            // 渲染时间
+            endTime = new Date().getTime();
+            $('#ftinfo').append(`&nbsp;&nbsp;|&nbsp;&nbsp;加载耗时：<code>${endTime-startTime}ms</code>`);  
+        </script>
     </body>
 </html>
