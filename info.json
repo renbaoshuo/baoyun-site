@@ -1,7 +1,7 @@
 {
     "url": "https://baoyun.ren",
     "title": "宝云小站",
-    "HTMLtitle": "<img src=\"assets/img/baoyun.svg\" style=\"height: 40px;\">", 
+    "HTMLtitle": "<img src=\"assets/img/baoyun.svg\" style=\"height: 80px; margin-bottom: -25px; margin-top: -10px;\">", 
     "name": "任宝云", 
     "birthInfo": {
         "birthYear": 2020, 
@@ -13,8 +13,7 @@
         "Email": "i@baoyun.ren"
     }, 
     "friendLinks": {
-        "宝硕小站": "https://www.baoshuo.ren",
-        "宝硕博客": "https://blog.baoshuo.ren"
+        "宝硕博客": "https://www.baoshuo.ren"
     },
     "description": "宝云小站",
     "keywords": [
