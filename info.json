@@ -1,7 +1,7 @@
 {
     "url": "https://baoyun.ren",
     "title": "宝云小站",
-    "HTMLtitle": "<img src=\"assets/img/baoyun.svg\" style=\"height: 80px; margin-bottom: -25px; margin-top: -10px;\">", 
+    "HTMLtitle": "<img src=\"https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/assets/img/baoyun.svg\" style=\"height: 80px; margin-bottom: -25px; margin-top: -10px;\">", 
     "name": "任宝云", 
     "birthInfo": {
         "birthYear": 2020, 
@@ -21,7 +21,7 @@
         "宝云"
     ],
     "styles": {
-        "backgroundImgURL": "assets/img/background.jpg"
+        "backgroundImgURL": "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/assets/img/background.jpg"
     },
     "displayCloudflareCDNInfo": true 
 }
