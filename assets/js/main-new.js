@@ -151,6 +151,20 @@ function getUserOSInfo() {
     return "Other";
 };
 
+/**
+ * 转换关键词
+ * @param keywords 关键词
+ */
+function getHTMLKeyWords(keywords) {
+    $tmpkwd = "";
+    for($_i = 0 ; $_i < keywords.length - 1 ; $_i++) {
+        $tmpkwd += keywords[$_i];
+        $tmpkwd += ",";
+    }
+    $tmpkwd += keywords[keywords.length - 1];
+    return $tmpkwd;
+}; 
+
 // 信息相关
 $.ajax({
     // url: "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/info.json",  /* for debug */
@@ -158,6 +172,12 @@ $.ajax({
     async: true,
     type: "GET",
     success: function(data, status, xhr) {
+        // 页面标题
+        document.title = data.title;                                          
+        // 页面描述
+        $('meta[name="description"]').attr('content', data.description);      
+        // 关键词
+        $('meta[name="keywords"]').attr('content', getHTMLKeyWords(data.keywords));              
         // 背景
         $('#bg').css('background-image', `url(${data.styles.backgroundImgURL})`);
         // 标题
@@ -177,6 +197,7 @@ $.ajax({
     error: function(xhr, status, error) {
         // 加载错误
         $("#app").html('<div style="text-align: center; margin: 20% 0;"><i class="fa fa-warning"></i>&nbsp;&nbsp;加载失败，请刷新页面重试！</div>');
+        document.title = "加载失败了! ";
     }
 });
 
