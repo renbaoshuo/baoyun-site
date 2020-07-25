@@ -4,5 +4,8 @@
 
 
 // 样式修改
-$('#bg').height($(document).height());
+$(document).ready(function(){
+    $('#bg').height($(document).height());
+})
+
 

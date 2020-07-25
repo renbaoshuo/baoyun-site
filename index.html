@@ -1,47 +1,165 @@
 <!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <meta name="viewport"    content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="keywords"    content="">
-        <meta name="author"      content="renbaoshuo">
-        <meta name="github"      content="https://github.com/renbaoshuo/baoyun-site/">
-        <!-- CSS -->
-        <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/style.min.css">
-        <!-- <link rel="stylesheet" type="text/css" href="assets/css/tab.css"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/tab.min.css">
-        <!-- <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-        <!-- JavaScript -->
-        <!-- <script src="assets/lib/jQuery/jquery.min.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
-        <script>
-            // 加载耗时
-            var startTime, endTime;
-            startTime = new Date().getTime();
-        </script>
-        <!-- Preload -->
-        <!-- <link rel="preload" href="assets/lib/font-awesome/fonts/fontawesome-webfont.woff2" as="style"> -->
-        <!-- <link rel="preload" href="assets/js/main.js" as="script"> -->
-        <!-- <link rel="preload" href="assets/js/style.js" as="script"> -->
-        <!-- <link rel="preload" href="assets/img/background.jpg" as="img"> -->
-    </head>
-    <body class="body" id="body">
-        <div id="app">加载中...</div>
-        <noscript>
-            <div style="padding: 10px 40px 10px 40px; position: relative; text-align: center; background: rgba(177,177,177,.3)!important;">
-                浏览器未开启 JavaScript 功能! 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="renbaoshuo">
+    <meta name="github" content="https://github.com/renbaoshuo/baoyun-site/">
+
+    <!-- Load Time -->
+    <script>
+        // 加载耗时
+        var startTime, endTime;
+        startTime = new Date().getTime();
+    </script>
+
+    <!-- Identify Browser -->
+    <script>
+        var ua = navigator && navigator.userAgent;
+        var isUseOldBrowser = (function () {
+            var m;
+
+            if (!ua) {
+                return true;                     // No User-Agent
+            }
+
+            if (/MSIE |Trident\//.exec(ua)) {
+                return true;                     // IE Browser
+            }
+            m = /Edge\/([\d.]+)/.exec(ua);
+            if (m && Number(m[1]) < 16) {
+                return true;                     // Edge >= 16
+            }
+            m = /Chrome\/([\d.]+)/.exec(ua);
+            if (m && Number(m[1]) < 40) {
+                return true;                     // Chrome >= 40
+            }
+            m = /Firefox\/([\d.]+)/.exec(ua);
+            if (m && Number(m[1]) < 38) {
+                return true;                     // Firefox >= 38
+            }
+
+            // 正常情况
+            return false;
+        })();
+
+        if (isUseOldBrowser) {
+            document.getElementById('body').innerHTML = '<h1>您可能在使用不受支持的<b style="color:#f00; font-size: 125%;">过时</b>浏览器，导致加载出现了问题。</h1>' +
+                '<h3 style="text-align: left; font-size:15px">如果您使用国产浏览器，请在右上方选择 <b style="color:#f00; font-size: 125%;">“极速模式”</b> ，而非 “兼容模式” 。</h3>' +
+                '<h3 style="text-align: left; font-size:15px">推荐使用基于 <code>Chromium</code> 的最新版本的 <a target="_blank" href="https://www.microsoft.com/zh-cn/windows/microsoft-edge" style="color:#f62;">Microsoft Edge 浏览器</a> 访问本站</h3>' +
+                '<div style="text-align: left !important;"><span style="font-size: 65%">UA 调试区: </span><code style="padding: 2px 4px; font-size: 55%; color: #c7254e; background-color: #f9f2f4; border-radius: 4px; text-align:left">' + ua + '</code></div><br>';
+
+        }
+
+    </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/style.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/tab.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/tab-new.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/tab.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+    <!-- JavaScript -->
+    <!-- <script src="assets/lib/jQuery/jquery.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+</head>
+
+<body class="body" id="body">
+    <div id="app">
+        <div id="bg"></div>
+        <div id="main" class="main card">
+            <h2 id="title" style="text-align: center;"></h2>
+            <div id="tab-labels">
+                <div>
+                    <label id="tab1-label" for="tab2-1">主页</label>
+                    <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
+                </div>
+                <div>
+                    <label id="tab2-label" for="tab2-2">客户端信息</label>
+                    <input id="tab2-2" name="tabs-two" type="radio">
+                </div>
             </div>
-        </noscript>
-        <!-- JavaScript -->
-        <!-- <script src="assets/js/init.js"></script> -->
-        <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/init.min.js"></script>
-        <!-- <script src="assets/js/main.js"></script> -->
-        <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/main.min.js"></script> -->
-        <!-- <script src="assets/js/style.js"></script>  -->
-        <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/style.min.js"></script>  -->
-    </body>
+            <div id="tab" class="tabs">
+                <div id="tab1" class="tab-2">
+                    <div class="loading" id="loading-tab1">
+                        <i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;加载中...
+                    </div>
+                    <noscript>
+                        <div style="padding: 10px 40px 10px 40px; position: relative; text-align: center; background: rgba(177,177,177,.3)!important;">
+                            浏览器未开启 JavaScript 功能!
+                        </div>
+                    </noscript>
+                    <div id="tab-1-s" style="display: none;">
+                        <div id="i" class="i">
+                            <br>
+                            <p>嘿，这里是<span id="i-name"></span>的个人网站，欢迎光临！</p>
+                            <br>
+                            <div id="age-time-n" style="font-size: 15px;"></div>
+                            <br>
+                            <h3 style="padding-left: 5px;">联系我</h3>
+                            <div id="contact" class="contact"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab2" class="tab-2" style="text-align:left;">
+                    <div class="loading" id="loading-tab2">
+                        <i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;加载中...
+                    </div>
+                    <div id="tab2-s" style="display: none;">
+                        <div id="info" class="info">
+                            <table style="padding: 10px 5px 10px 2px;">
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-info-circle"></i>
+                                    </td>
+                                    <td style="padding-left: 10px; text-align: left; text-indent: 0%; line-height: 16px;">
+                                        此页面仅用于定位您的浏览器和网络信息，不涉及您的隐私信息，更不会将数据上传至服务器，请放心使用。
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br>
+                        <div id="userinfo" style="font-size: 85%; line-height: 165%;">
+                            <span id="userip">您的 IP 地址： <code id="userip-c"></code></span>
+                            <br>
+                            <span id="userlocation">您的地理位置： <code id="userlocation-c"></code></span>
+                            <br>
+                            <span>客户端当前时间： <code id="usernowtime"></code></span>
+                            <br>
+                            <span>客户端操作系统： <code id="usersys"></code></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span id="ftinfo" style="text-align: center; font-size: 70%;"></span>
+            <footer id="footer" style="padding-top:10px; font-size: 10px;">
+                <span>
+                    &copy;&nbsp;<span>2020</span>&nbsp;
+                    <a style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;"
+                        href="https://baoshuo.ren/">宝硕小站</a>
+                    &nbsp;版权所有
+                </span>
+                &nbsp;|&nbsp;
+                <a href="https://github.com/renbaoshuo/baoyun-site"
+                    style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;">
+                    <i class="fa fa-github"></i>&nbsp;GitHub
+                </a>
+                <br>
+            </footer>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/main.min.js"></script> -->
+    <script src="assets/js/style.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/style.min.js"></script>  -->
+</body>
+
 </html>
