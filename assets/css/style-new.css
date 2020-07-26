@@ -218,7 +218,7 @@ footer#footer {
 
 .loading {
     align-self: center;
-    text-align: center;
+    text-align: center !important;
 }
 
 #friends {

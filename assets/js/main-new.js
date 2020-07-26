@@ -5,19 +5,41 @@
  * + 使用异步方式加载内容
  */
 
+console.log("\n %c 宝云小站 %c by 任宝硕 | www.baoyun.ren", "color:#eee;background:#444;padding:5px 0;", "color:#444;background:#eee;padding:5px 0;");
+console.log('%c\n\n这是一个开源软件，源代码托管在 Github 中，点击下方链接前往 Github 项目页面。\n\nThis is an open source software. The source code is hosted in Github. Click the link below to go to the Github project page.%c\n\nhttps://github.com/renbaoshuo/baoyun-site\n ', "color:#eee;background:#444;padding:5px 0;", "");
+
+
  /**
   * tab 切换
   */
 $(document).ready(function(){
     $('#tab1').show();
     $('#tab2').hide();
+    $('#tab3').hide();
+    $('#tab4').hide();
     $('#tab2-1').click(function(){
         $('#tab2').hide();
         $('#tab1').show();
+        $('#tab3').hide();
+        $('#tab4').hide();
     });
     $('#tab2-2').click(function(){
         $('#tab1').hide();
         $('#tab2').show();
+        $('#tab3').hide();
+        $('#tab4').hide();
+    });
+    $('#tab2-3').click(function(){
+        $('#tab1').hide();
+        $('#tab2').hide();
+        $('#tab3').show();
+        $('#tab4').hide();
+    });
+    $('#tab2-4').click(function(){
+        $('#tab1').hide();
+        $('#tab2').hide();
+        $('#tab3').hide();
+        $('#tab4').show();
     });
 });
 
@@ -167,8 +189,8 @@ function getHTMLKeyWords(keywords) {
 
 // 信息相关
 $.ajax({
-    // url: "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/info.json",  /* for debug */
-    url: "info.json",
+    url: "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/info.json",  /* for debug */
+    // url: "info.json",
     async: true,
     type: "GET",
     success: function(data, status, xhr) {
@@ -192,7 +214,7 @@ $.ajax({
         $('#footer').append(getHTMLFriendLinks(data.friendLinks));
         // 处理完成再显示
         $('#loading-tab1').hide();
-        $('#tab-1-s').show();
+        $('#tab1-s').show();
     },
     error: function(xhr, status, error) {
         // 加载错误

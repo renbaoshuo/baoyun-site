@@ -11,14 +11,14 @@
 }
 
 #tab-labels div {
-    width: 50%;
+    width: 25%;
     display: inline-block;
 }
 
 #tab-labels label {
     cursor: pointer;
     display: block;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     font-weight: 300;
     line-height: 1em;
     padding: 1rem 0;
@@ -55,4 +55,8 @@
     margin: 15px 0px;
     min-height: 350px;
     max-height: 350px;
+}
+
+.tabs div{
+    text-align: left;
 }

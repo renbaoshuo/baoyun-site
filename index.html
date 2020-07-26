@@ -58,10 +58,10 @@
     </script>
 
     <!-- CSS -->
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style-new.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/style-new.min.css">
-    <!-- <link rel="stylesheet" type="text/css" href="assets/css/tab-new.css"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/tab-new.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style-new.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/style-new.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/tab-new.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/css/tab-new.min.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="assets/lib/font-awesome/css/font-awesome.min.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
 
@@ -76,17 +76,25 @@
         <div id="main" class="main card">
             <h2 id="title" style="text-align: center;"></h2>
             <div id="tab-labels">
-                <div>
+                <div id="tab-label1">
                     <label id="tab1-label" for="tab2-1">主页</label>
                     <input id="tab2-1" name="tabs-two" type="radio" checked="checked">
                 </div>
-                <div>
+                <div id="tab-label2">
                     <label id="tab2-label" for="tab2-2">客户端信息</label>
                     <input id="tab2-2" name="tabs-two" type="radio">
                 </div>
+                <div id="tab-label3">
+                    <label id="tab3-label" for="tab2-3">相册</label>
+                    <input id="tab2-3" name="tabs-two" type="radio">
+                </div>
+                <div id="tab-label4">
+                    <label id="tab4-label" for="tab2-4">留言</label>
+                    <input id="tab2-4" name="tabs-two" type="radio">
+                </div>
             </div>
-            <div id="tab" class="tabs">
-                <div id="tab1" class="tab-2">
+            <div id="tabs" class="tabs">
+                <div id="tab1">
                     <div class="loading" id="loading-tab1">
                         <i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;加载中...
                     </div>
@@ -95,7 +103,7 @@
                             浏览器未开启 JavaScript 功能!
                         </div>
                     </noscript>
-                    <div id="tab-1-s" style="display: none;">
+                    <div id="tab1-s" style="display: none;">
                         <div id="i" class="i">
                             <br>
                             <p>嘿，这里是<span id="i-name"></span>的个人网站，欢迎光临！</p>
@@ -107,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="tab2" class="tab-2" style="text-align:left;">
+                <div id="tab2">
                     <div class="loading" id="loading-tab2">
                         <i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;加载中...
                     </div>
@@ -136,6 +144,28 @@
                         </div>
                     </div>
                 </div>
+                <div id="tab3">
+                    <!-- <div class="loading" id="loading-tab3">
+                        <i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;加载中...
+                    </div> -->
+                    <div style="text-align: center; margin: 20% 0;">
+                        <i class="fa fa-warning"></i>&nbsp;&nbsp;该板块暂未开放
+                    </div>
+                    <div id="tab3-s" style="display: none;">
+
+                    </div>
+                </div>
+                <div id="tab4">
+                    <!-- <div class="loading" id="loading-tab4">
+                        <i class="fa fa-refresh fa-spin"></i>&nbsp;&nbsp;加载中...
+                    </div> -->
+                    <div style="text-align: center; margin: 20% 0;">
+                        <i class="fa fa-warning"></i>&nbsp;&nbsp;该板块暂未开放
+                    </div>
+                    <div id="tab4-s" style="display: none;">
+
+                    </div>
+                </div>
             </div>
             <span id="ftinfo" style="text-align: center; font-size: 70%;"></span>
             <footer id="footer" style="padding-top:10px; font-size: 10px;">
@@ -146,19 +176,19 @@
                     &nbsp;版权所有
                 </span>
                 &nbsp;|&nbsp;
-                <a href="https://github.com/renbaoshuo/baoyun-site"
+                源代码由&nbsp;<a href="https://github.com/renbaoshuo/baoyun-site"
                     style="color: inherit; text-decoration: none; cursor: pointer; word-break: break-all;">
-                    <i class="fa fa-github"></i>&nbsp;GitHub
-                </a>
+                    <i class="fa fa-github"></i>&nbsp;GitHub&nbsp;提供托管服务
+                </a>&nbsp;
                 <br>
             </footer>
         </div>
     </div>
     <!-- JavaScript -->
-    <!-- <script src="assets/js/main-new.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/main-new.min.js"></script>
-    <!-- <script src="assets/js/style-new.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/style-new.min.js"></script> 
+    <script src="assets/js/main-new.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/main-new.min.js"></script> -->
+    <script src="assets/js/style-new.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site@master/assets/js/style-new.min.js"></script>  -->
 </body>
 
 </html>
