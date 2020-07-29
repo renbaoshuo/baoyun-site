@@ -9,37 +9,37 @@ console.log("\n %c 宝云小站 %c by 任宝硕 | www.baoyun.ren", "color:#eee;b
 console.log('%c\n\n这是一个开源软件，源代码托管在 Github 中，点击下方链接前往 Github 项目页面。\n\nThis is an open source software. The source code is hosted in Github. Click the link below to go to the Github project page.%c\n\nhttps://github.com/renbaoshuo/baoyun-site\n ', "color:#eee;background:#444;padding:5px 0;", "");
 
 
- /**
-  * tab 切换
-  */
+/**
+ * tab 切换
+ */
 $(document).ready(function(){
-    $('#tab1').show();
-    $('#tab2').hide();
-    $('#tab3').hide();
-    $('#tab4').hide();
+    $('#tab1').css("display", "inline-block");
+    $('#tab2').css("display", "none");
+    $('#tab3').css("display", "none");
+    $('#tab4').css("display", "none");
     $('#tab2-1').click(function(){
-        $('#tab2').hide();
-        $('#tab1').show();
-        $('#tab3').hide();
-        $('#tab4').hide();
+        $('#tab2').css("display", "none");
+        $('#tab1').css("display", "inline-block");
+        $('#tab3').css("display", "none");
+        $('#tab4').css("display", "none");
     });
     $('#tab2-2').click(function(){
-        $('#tab1').hide();
-        $('#tab2').show();
-        $('#tab3').hide();
-        $('#tab4').hide();
+        $('#tab1').css("display", "none");
+        $('#tab2').css("display", "inline-block");
+        $('#tab3').css("display", "none");
+        $('#tab4').css("display", "none");
     });
     $('#tab2-3').click(function(){
-        $('#tab1').hide();
-        $('#tab2').hide();
-        $('#tab3').show();
-        $('#tab4').hide();
+        $('#tab1').css("display", "none");
+        $('#tab2').css("display", "none");
+        $('#tab3').css("display", "inline-block");
+        $('#tab4').css("display", "none");
     });
     $('#tab2-4').click(function(){
-        $('#tab1').hide();
-        $('#tab2').hide();
-        $('#tab3').hide();
-        $('#tab4').show();
+        $('#tab1').css("display", "none");
+        $('#tab2').css("display", "none");
+        $('#tab3').css("display", "none");
+        $('#tab4').css("display", "inline-block");
     });
 });
 
@@ -213,8 +213,8 @@ $.ajax({
         // 友情链接
         $('#footer').append(getHTMLFriendLinks(data.friendLinks));
         // 处理完成再显示
-        $('#loading-tab1').hide();
-        $('#tab1-s').show();
+        $('#loading-tab1').css("display", "none");
+        $('#tab1-s').css("display", "inline-block");
     },
     error: function(xhr, status, error) {
         // 加载错误
@@ -231,14 +231,14 @@ $.ajax({
     success: function(data, status, xhr) {
         $('#userip-c').html(data.ip);
         $('#userlocation-c').html(`${data.location.country_name} ${data.location.province} ${data.location.city}`);
-        $('#loading-tab2').hide();
-        $('#tab2-s').show();
+        $('#loading-tab2').css("display", "none");
+        $('#tab2-s').css("display", "inline-block");
     },
     error: function(xhr, status, error) {
-        $("#userip").hide();
-        $('#userlocation').hide();
-        $('#loading-tab2').hide();
-        $('#tab2-s').show();
+        $("#userip").css("display", "none");
+        $('#userlocation').css("display", "none");
+        $('#loading-tab2').css("display", "none");
+        $('#tab2-s').css("display", "inline-block");
     }
 });
 
