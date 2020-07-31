@@ -3,11 +3,16 @@
  * 
  * + 需引用 jQuery 库, Font Awesome 库, style.css, tab.css
  * + 使用异步方式加载内容
+ * 
+ * 核心功能
+ *   + tab 切换实现
+ *   + 页面显示信息处理 + 获取
+ * 
  */
 
+// 控制台说明
 console.log("\n %c 宝云小站 %c by 任宝硕 | www.baoyun.ren", "color:#eee;background:#444;padding:5px 0;", "color:#444;background:#eee;padding:5px 0;");
 console.log('%c\n\n这是一个开源软件，源代码托管在 Github 中，点击下方链接前往 Github 项目页面。\n\nThis is an open source software. The source code is hosted in Github. Click the link below to go to the Github project page.%c\n\nhttps://github.com/renbaoshuo/baoyun-site\n ', "color:#eee;background:#444;padding:5px 0;", "");
-
 
 /**
  * tab 切换
@@ -187,10 +192,10 @@ function getHTMLKeyWords(keywords) {
     return $tmpkwd;
 }; 
 
-// 信息相关
+// 信息处理
 $.ajax({
-    url: "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/info.json",  /* for debug */
-    // url: "info.json",
+    // url: "https://cdn.jsdelivr.net/gh/renbaoshuo/baoyun-site/info.json",  /* for debug */
+    url: "info.json",
     async: true,
     type: "GET",
     success: function(data, status, xhr) {
@@ -245,6 +250,7 @@ $.ajax({
 setInterval(function(){ $('#usernowtime').html(`${new Date()}`) }, 100);
 $('#usersys').html(getUserOSInfo());
 
+// CDN 节点
 $.ajax({
     url: "/cdn-cgi/trace",
     success: function(data, status) {
