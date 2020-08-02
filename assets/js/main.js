@@ -15,40 +15,6 @@ console.log("\n %c 宝云小站 %c by 任宝硕 | www.baoyun.ren", "color:#eee;b
 console.log('%c\n\n这是一个开源软件，源代码托管在 Github 中，点击下方链接前往 Github 项目页面。\n\nThis is an open source software. The source code is hosted in Github. Click the link below to go to the Github project page.%c\n\nhttps://github.com/renbaoshuo/baoyun-site\n ', "color:#eee;background:#444;padding:5px 0;", "");
 
 /**
- * tab 切换
- */
-$(document).ready(function(){
-    $('#tab1').css("display", "inline-block");
-    $('#tab2').css("display", "none");
-    $('#tab3').css("display", "none");
-    $('#tab4').css("display", "none");
-    $('#tab2-1').click(function(){
-        $('#tab2').css("display", "none");
-        $('#tab1').css("display", "inline-block");
-        $('#tab3').css("display", "none");
-        $('#tab4').css("display", "none");
-    });
-    $('#tab2-2').click(function(){
-        $('#tab1').css("display", "none");
-        $('#tab2').css("display", "inline-block");
-        $('#tab3').css("display", "none");
-        $('#tab4').css("display", "none");
-    });
-    $('#tab2-3').click(function(){
-        $('#tab1').css("display", "none");
-        $('#tab2').css("display", "none");
-        $('#tab3').css("display", "inline-block");
-        $('#tab4').css("display", "none");
-    });
-    $('#tab2-4').click(function(){
-        $('#tab1').css("display", "none");
-        $('#tab2').css("display", "none");
-        $('#tab3').css("display", "none");
-        $('#tab4').css("display", "inline-block");
-    });
-});
-
-/**
  * 返回当前年龄的HTML文本
  * @param year  出生年份
  * @param month 出生月份
@@ -230,7 +196,7 @@ $.ajax({
 
 // 客户端 IP
 $.ajax({
-    url: "http://myip.ipip.net/json",
+    url: "https://myip.ipip.net/json",
     async: true,
     type: "GET",
     success: function(data, status, xhr) {
