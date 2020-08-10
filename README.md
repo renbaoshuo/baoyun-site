@@ -16,18 +16,15 @@
 `description` | 网页描述
 `keywords`    | 关键词
 `styles`      | 样式配置项
-`displayCloudflareCDNInfo` | 是否显示当前使用的 CloudFlare CDN 节点（仅对使用 CloudFlare CDN 的站点有效）
 
 ## 关于
 
-由 [任宝硕](https://baoshuo.ren) 编写。
-
-网站图标付费购买自 [阿里云·云市场](https://www.aliyun.com/?source=5176.11533457&userCode=wbduu7yg&type=copy) 。
+由 [宝硕](https://baoshuo.ren) 编写。
 
 ## 使用开源库
 
 + [jQuery](https://jquery.com/) 
 + [font-awesome](http://fontawesome.io/) 
 
-CDN 加速服务由 [**CloudFlare**](https://www.cloudflare.com/) 提供。
+CDN ~~加速~~减速服务由 [**CloudFlare**](https://www.cloudflare.com/) 提供。
 
