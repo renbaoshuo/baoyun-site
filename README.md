@@ -1,30 +1,21 @@
-# 宝云小站
+# Baoyun's Site
 
-> [宝云小站](https://baoyun.ren)
+## Development
 
-## 配置文件说明
+```bash
+yarn install
+yarn dev
+```
 
-配置项        | 含义
-------------- | ----
-`url`         | 首页链接
-`title`       | 页面标题
-`HTMLtitle`   | 在**页面**上显示的标题（`HTML`结构）
-`name`        | 姓名
-`birthInfo`   | 出生日期
-`contact`     | 联系方式
-`friendLinks` | 友情链接
-`description` | 网页描述
-`keywords`    | 关键词
-`styles`      | 样式配置项
+## Build for Production
 
-## 关于
+```bash
+yarn build
+```
 
-由 [宝硕](https://baoshuo.ren) 编写。
+## Author
 
-## 使用开源库
+**Baoyun's Site** © [Baoshuo](https://github.com/renbaoshuo), Released under the [AGPL-3.0](./LICENSE) License.  
+Authored and maintained by Baoshuo with help from [contributors](https://github.com/renbaoshuo/baoyun-site/contributors).
 
-+ [jQuery](https://jquery.com/) 
-+ [font-awesome](http://fontawesome.io/) 
-
-CDN ~~加速~~减速服务由 [**CloudFlare**](https://www.cloudflare.com/) 提供。
-
+> [Personal Website](https://baoshuo.ren) · [Blog](https://blog.baoshuo.ren) · GitHub [@renbaoshuo](https://github.com/renbaoshuo) · Twitter [@renbaoshuo](https://twitter.com/renbaoshuo)
