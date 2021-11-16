@@ -9,9 +9,12 @@ import moment from 'moment';
 const birthdate = moment([2020, 1, 25]);
 const now = moment(new Date());
 
+// Images
+import imgTitle from '../../assets/baoyun.svg';
+
 export default () => (
     <div className="profile">
-        <img className="img-title" src="/src/assets/baoyun.svg" alt="宝云小站" />
+        <img className="img-title" src={imgTitle} alt="宝云小站" />
         <div className="content">
             <p>嘿，这里是任宝云的个人网站，欢迎光临！</p>
             <p>
