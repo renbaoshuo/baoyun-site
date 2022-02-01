@@ -29,5 +29,3 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist
           cname: baoyun.ren
-          user_name: BaoshuoBot
-          user_email: bot@baoshuo.ren
